@@ -5,17 +5,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* reduje un poco para que no quede tan vacío */
-  background-color: #000000; /* aqua más elegante */
-  border-radius: 12px; /* un poquito más redondeado */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* sombra sutil */
+  gap: 20px; 
+  background-color: #000000; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
   transition: box-shadow 0.2s ease, background-color 0.2s ease;
-  cursor: pointer; /* da sensación de interactividad */
+  cursor: pointer; 
 }
 
 .div-card:hover {
-  box-shadow: 0 8px 12px rgba(0,0,0,0.15); /* sombra más marcada al hover */
- 
+  box-shadow: 10px 8px 12px rgba(0,0,0,0.65);
 }
 
 .div-card p {

@@ -1,12 +1,23 @@
 .div-home{
   width: 100%;
-  height: 35vh;
-  background-color: black;
+  height: 55vh;
+  background-color: #1A202C ;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 70px;
+}
+
+.div-first-title{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.react-icons{
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
 }
 
 .first-title{
@@ -30,76 +41,182 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  backdrop-filter: blur(4px); 
+ overflow-x: hidden; 
+  overflow-y: auto;   
+  padding: 20px;      
+  box-sizing: border-box;
 }
 
 .modalContent {
-  background: #fff;
-  padding: 20px 30px;
-  border-radius: 10px;
-  max-width: 500px;
+  background: #9f9f9f;
+  padding: 48px 23px;
+  border-radius: 12px;
+  max-width: 550px;
   width: 90%;
   position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .modalContent pre {
-  white-space: pre-wrap; /* permite saltos de línea automáticos */
-  word-break: break-word; /* evita que se salga del modal */
-  background: #f4f4f4;
-  padding: 10px;
-  border-radius: 6px;
-  max-height: 300px; /* opcional: que no sea demasiado alto */
-  overflow: auto; /* agrega scroll si es necesario */
+  white-space: pre-wrap;
+  word-break: break-word; 
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  max-height: 350px; 
+  overflow: auto; 
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 14px;
+  color: #333;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
 }
 
 .closeButton {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
+  top: 12px;
+  right: 12px;
+  background: transparent;
   border: none;
   font-size: 20px;
   cursor: pointer;
+  color: #ffffff;
+  transition: color 0.2s ease;
 }
 
+.closeButton:hover{
+  color: #000000;
+}
+
+
 .div-first-container{
-  width: 80%;
+  width: 90%;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 30px;
+  margin-top: 5%;
+  
 }
 
 .div-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
-  gap: 20px; /* espacio entre cards */
-  padding: 20px;
-  background-color: #146C94;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px; 
+  padding: 80px;
+  border-radius: 20px;
+  padding-top: 100px;
+  background-color: #E4E7EB  ;
   height: 100%;
   justify-items: center;
-  
+  margin-bottom: 80px;
+  background-image: radial-gradient(circle, #4a5568 0px, transparent 1px);
+  background-size: 20px 20px;
+  background-repeat: repeat;
+  box-shadow: -20px -1px 10px 8px rgba(0, 0, 0, .2);
 }
 
-/* Responsive para tablets */
-@media (max-width: 1024px) {
-  .div-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+.fork-btn {
+  position: absolute;
+  top: -21px;
+  right: 49px;
+  transform: rotate(45deg) translate(50%, -50%);
+  width: 20%;
+  background-color: #ff416c;
+  color: white;
+  padding: 8px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.fork-btn:hover {
+  background-color: #ff6384;
+  transform: rotate(45deg) translate(50%, -50%) scale(1.1);
+}
+
+.fork-btn p {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 40px;
+}
+
+
+.footer {
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  border-top: 1px solid #ccc; 
+  position: static; 
+  bottom: 0;
+  left: 0;
+  background: transparent; 
+}
+
+
+
+
+@media (max-width: 1000px) {
+   .div-container {
+    grid-template-columns: repeat(2, 1fr); 
+  } 
+  .fork-btn{
+    width: 36%;
   }
 }
 
-/* Responsive para móviles grandes */
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .div-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: 1fr; 
+  }
+
+  .first-title{
+    text-align: center;
+  }
+
+  .div-first-container{
+    width: 100%;
+    margin: 0;
+  }
+
+  .div-container{
+    border-radius: 0px;
+  }
+
+  .fork-btn p{
+    font-size: 11px;
+    margin-right: -5px;
+  }
+
+  .fork-btn{
+     transform: none;
+    top: 0;
+    width: 50%;
+    max-width: 320px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+
+  .fork-btn:hover {
+  background-color: #ff6384;
+  transform: none;
+}
+
+  .div-first-title{
+    flex-direction: column;
   }
 }
 
-/* Responsive para móviles pequeños */
-@media (max-width: 480px) {
-  .div-container {
-    grid-template-columns: 1fr; /* 1 columna */
-  }
-}

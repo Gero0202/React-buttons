@@ -1,17 +1,17 @@
 const Button = ({
   text,
   cssCode,
-  className,          // <-- nueva prop
+  className,         
   onClick
 }: {
   text: string;
   cssCode: string;
-  className?: string;  // opcional
+  className?: string;  
   onClick: (code: string) => void;
 }) => {
   return (
     <button
-      className={className} // combina la clase base con la personalizada
+      className={className} 
       onClick={() => onClick(cssCode)}
     >
       {text}
