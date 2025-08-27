@@ -1,0 +1,105 @@
+.div-home{
+  width: 100%;
+  height: 35vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+
+.first-title{
+  font-size: 2.9em;
+  color: #F6F1F1;
+}
+
+.second-title{
+  font-size: 1.5em;
+  font-weight: lighter;
+  color: #F6F1F1;
+}
+
+.second-title a{
+  color: #19A7CE;;  
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.modalContent pre {
+  white-space: pre-wrap; /* permite saltos de línea automáticos */
+  word-break: break-word; /* evita que se salga del modal */
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 6px;
+  max-height: 300px; /* opcional: que no sea demasiado alto */
+  overflow: auto; /* agrega scroll si es necesario */
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.div-first-container{
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.div-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+  gap: 20px; /* espacio entre cards */
+  padding: 20px;
+  background-color: #146C94;
+  height: 100%;
+  justify-items: center;
+  
+}
+
+/* Responsive para tablets */
+@media (max-width: 1024px) {
+  .div-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  }
+}
+
+/* Responsive para móviles grandes */
+@media (max-width: 768px) {
+  .div-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+}
+
+/* Responsive para móviles pequeños */
+@media (max-width: 480px) {
+  .div-container {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+}
