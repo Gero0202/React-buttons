@@ -686,8 +686,9 @@ export default function Home() {
         © 2025 Gero Tortosa
       </footer>
       {cssCode && (
-        <div className={styles.modalOverlay} onClick={closeModal}>
+        <div className={styles.modalOverlay}>
           <div className={styles.modalContent} >
+            <p className={styles.modalTitle}>CSS</p>
             <button className={styles.closeButton} onClick={closeModal}>✖</button>
             <pre>{cssCode}</pre>
           </div>
