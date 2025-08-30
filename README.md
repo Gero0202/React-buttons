@@ -9,7 +9,7 @@ La idea es que un usuario pueda navegar la galeria de botones, elegir el que mas
 ## 🎨 Cómo usar un botón en tu proyecto
 
 1. Explora la galeria y haz click en un boton que te guste.
-
+  
 2. Copia el codigo CSS que aparece en pantalla.
 
 3. Pegalo en tu archivo CSS o modulo de estilos.
